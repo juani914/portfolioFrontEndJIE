@@ -1,0 +1,36 @@
+<header>
+    <nav class="navbar navbar-expand-lg bg-violet fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/img/APLogo-20-20.png" alt="" width="20%" height="" />
+        </a>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item">
+            <a href="https://github.com/juani914" target="_blank"
+              ><i class="fa-brands fa-github fa-2xl"></i
+            ></a>
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://www.instagram.com/juanielizari/?igshid=MGNiNDI5ZTU%3D"
+              target="_blank"
+              ><i class="fa-brands fa-instagram fa-2xl"></i
+            ></a>
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://www.linkedin.com/in/juani-elizari-6b0231171/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin fa-2xl"></i
+            ></a>
+          </li>
+          <li class="list-group-item"><i class="fa-solid fa-user-lock fa-2xl" type="button"data-bs-toggle="modal"data-bs-target="#loginModal" (click)="login()" *ngIf="!isLogged">
+            </i>
+          </li>
+          <li class="list-group-item"><i class="fa-solid fa-user fa-2xl" type="button"data-bs-toggle="modal"data-bs-target="#loginModal" (click)="onLogOut()" *ngIf="isLogged">
+        </i>
+      </li>
+        </ul>
+      </div>
+    </nav>
+  </header>

@@ -1,0 +1,14 @@
+footer{
+    background-color: #1e1a41;
+}
+
+footer p{
+    margin: 0;
+    color: rgb(100, 100, 100);
+}
+footer .container{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

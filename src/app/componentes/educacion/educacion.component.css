@@ -1,0 +1,73 @@
+#estudios .row {
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .estudio-card {
+    background-color: #221e3a;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .estudio-content {
+    flex: 1;
+  }
+  
+  .estudio-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 10px;
+  }
+  
+  .estudio-description {
+    margin-bottom: 10px;
+  }
+  
+  .estudio-actions .btn {
+    margin-right: 10px;
+  }
+  
+  .estudio-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .estudio-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .estudio-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .estudio-actions {
+      margin-top: 10px;
+    }
+  
+    .estudio-image {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .estudio-title {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+  
+    .estudio-description {
+      margin-bottom: 5px;
+    }
+  }
+  
+  

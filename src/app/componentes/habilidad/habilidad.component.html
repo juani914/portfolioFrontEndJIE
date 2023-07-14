@@ -1,0 +1,39 @@
+<div class="row">
+  <h1>Habilidades</h1>
+  <div class="col-lg-2">
+    <button type="button" routerLink="/nuevahab" class="btn btn-dark" *ngIf="isLogged">Nueva Habilidad</button>
+  </div>
+  
+  <div class="row text-center circulo-container">
+    <div class="col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let habilidad of habilidades"> <!-- Cambia "habilidad" a "habilidades" -->
+      <circle-progress 
+        [percent]="habilidad.porcentaje" 
+        [radius]="60" 
+        [imageSrc]="''" 
+        [title]="habilidad.nombre"
+        [titleColor]="'#ffffff'"
+        [showTitle]="true" 
+        [showImage]="false" 
+        [imageHeight]="20" 
+        [imageWidth]="20" 
+        [showUnits]="false"
+        [showSubtitle]="false" 
+        [outerStrokeWidth]="8" 
+        [innerStrokeWidth]="2" 
+        [outerStrokeColor]="'#FFFF00'"
+        [innerStrokeColor]="'#C7E596'" 
+        [animation]="true" 
+        [animationDuration]="600">
+      </circle-progress>
+        
+      <div class="button-container" *ngIf="isLogged">
+        <button class="btn btn-light" routerLink="/edithab/{{habilidad.id}}">
+          <i class="bi bi-pencil-fill"></i>
+        </button>
+        <button class="btn btn-danger" (click)="delete(habilidad.id)">
+          <i class="bi bi-trash-fill"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

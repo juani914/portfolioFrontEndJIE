@@ -18,7 +18,7 @@ export class AcercaMiComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const id = 1;
+    const id = 2;
     this.personaService.getPersona(id).subscribe(data => {
       this.persona = data;
     }, error => {

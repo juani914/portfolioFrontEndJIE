@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/servicios/persona.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ImageService } from 'src/app/servicios/image.service';
 
 @Component({
   selector: 'app-edit-acerca-mi',
@@ -14,7 +15,8 @@ export class EditAcercaMiComponent implements OnInit {
   constructor(
     public personaService: PersonaService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    public imageService: ImageService
   ) {}
 
   ngOnInit(): void {
@@ -43,4 +45,31 @@ export class EditAcercaMiComponent implements OnInit {
       }
     );
   }
+
+  onFileSelected(event: any) {
+    const file = event.target.files[0];
+    const id = this.persona.id;
+    const name = "perfil_" + id;
+    this.imageService.uploadImage(file, name).then(url => {
+      // Guarda la URL de la imagen en el objeto persona
+      this.persona.img = url;
+    }).catch(error => {
+      console.log(error);
+    });
+  }
+
+  openFilePicker() {
+    // Obtener el elemento input de tipo file
+    const fileInput = document.getElementById('img');
+    if (fileInput) {
+      // Crear un evento de clic y dispararlo en el elemento input
+      const clickEvent = new MouseEvent('click', {
+        view: window,
+        bubbles: true,
+        cancelable: true
+      });
+      fileInput.dispatchEvent(clickEvent);
+    }
+  }
+  
 }

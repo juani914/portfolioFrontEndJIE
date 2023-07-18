@@ -21,3 +21,26 @@
   button {
     margin-top: 10px;
   }
+
+#img {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.button-select-image {
+  background-color: #f8f9fa;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.button-select-image:hover {
+  background-color: #e9ecef;
+}

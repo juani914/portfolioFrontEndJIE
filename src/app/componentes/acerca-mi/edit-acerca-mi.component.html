@@ -17,13 +17,10 @@
             <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
           </div>
           <div class="form-group">
-  <label for="img">Imagen</label>
-  <input type="file" class="form-control" id="img" name="img" style="display: none;" (change)="onFileSelected($event)">
-  <button type="button" class="btn btn-light" (click)="openFilePicker()">Seleccionar Imagen</button>
-</div>
-
-
-
+            <label for="img">Imagen</label>
+            <input type="file" class="form-control" id="img" name="img" style="display: none;" (change)="onFileSelected($event)">
+            <button type="button" class="button-select-image" (click)="openFilePicker()">Seleccionar Imagen</button>
+          </div>
           <div class="form-group">
             <label for="descripcion">Descripción</label>
             <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="persona.descripcion" required></textarea>
@@ -34,3 +31,7 @@
     </div>
   </div>
 </div>
+          
+
+
+

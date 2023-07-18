@@ -11,6 +11,7 @@ import { TokenService } from 'src/app/servicios/token.service';
 export class AcercaMiComponent implements OnInit {
   persona: persona = new persona('', '', '', '');
   isLogged = false;
+  
 
   constructor(
     public personaService: PersonaService,
